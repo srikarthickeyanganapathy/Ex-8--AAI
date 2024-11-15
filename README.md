@@ -33,26 +33,27 @@ Perform speech recognition with exceptional handling:<Br>
 •	A generic exception block captures any other unexpected errors.<Br>
 
 ## PROGRAM:
-```
+```py
 import speech_recognition as sr
 r = sr.Recognizer()
-duration = 30
-print("Say something")
-with sr.Microphone() as source:
-    audio_data = r.listen(source,timeout=duration)
-
+duration = 5
+with sr.Microphone() as source :
+    print("Say something:\n\n")
+    audio_data = r.listen(source,timeout = duration)
 try:
-    text= r.recognize_google(audio_data)
+    text = r.recognize_google(audio_data)
+    print("You said:\n", text)
 except sr.UnknownValueError:
-    print("Sorry, couldn't understand the audio")
+    print("Sorry, could not understand audio")
 except sr.RequestError as e:
-    print(f'Error with request tp Google Speech Recognition service: {e}')
+    print(f'Error with the request to Google Speech Recognition service: {e}')
 except Exception as e:
-    print(f'Error : {e}')
+    print(f'Error: {e}')
 ```
 
-## OUTPUT:
-![378376556-c96e7b80-8474-43f4-a9e0-8fad643be4f2](https://github.com/user-attachments/assets/f6b62dcf-310c-4308-adfc-ffa914e60142)
+<H3> Output:</H3>
+![image](https://github.com/user-attachments/assets/755a4a05-318b-4924-8585-464e4d481268)
 
-## RESULT:
-Thus, the python program for Speech Recognition is implemented successfully.
+<H3> Result:</H3>
+
+Thus, we have implemented a program to transcribe the audio file in the file variable and print the transcribed text on the console, one line at a time.

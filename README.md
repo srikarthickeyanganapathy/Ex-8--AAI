@@ -51,8 +51,8 @@ except Exception as e:
     print(f'Error: {e}')
 ```
 
-<H3> Output:</H3>
-![image](https://github.com/user-attachments/assets/755a4a05-318b-4924-8585-464e4d481268)
+## Output:
+![image](https://github.com/user-attachments/assets/f9115ea3-1692-4331-bbfd-068bf054cbd7)
 
 <H3> Result:</H3>
 
